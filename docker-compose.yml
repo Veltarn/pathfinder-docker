@@ -1,0 +1,9 @@
+service:
+  redis:
+    image: redis
+  pathfinder:
+    build: .
+    ports:
+      - "8080:80"
+    links:
+      - "redis"
